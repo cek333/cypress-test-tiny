@@ -4,6 +4,7 @@
   "description": "Small project for quickly testing Cypress.io test runner",
   "scripts": {
     "cypress:run": "cypress run --env userAgent=mobile",
+    "cypress:run:chrome": "cypress run --env userAgent=mobile --browser chrome",
     "cypress:open": "cypress open --env userAgent=mobile",
     "cypress:verify": "cypress verify",
     "cypress:version": "cypress version",
@@ -17,7 +18,7 @@
   "author": "Gleb Bahmutov <gleb@cypress.io>",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^5.2.0",
+    "cypress": "^9.6.1",
     "ok-file": "1.5.2"
   },
   "repository": {

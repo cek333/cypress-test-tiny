@@ -1,7 +1,13 @@
 /// <reference types="cypress" />
 describe('sample', () => {
     beforeEach('open home', () => {
-        cy.visit('https://www.fandango.com')
+        cy.on('uncaught:exception', (e, runnable) => {
+            console.log('error', e)
+            console.log('runnable', runnable)
+            return false
+        })
+        cy.log(window.navigator.userAgent);
+        cy.visit('/')
     })
 
     it('can click Spotlight to land on mobile home page', () => {
